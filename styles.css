@@ -1,0 +1,174 @@
+:root {
+  font-family: "Roboto", Arial, sans-serif;
+  color-scheme: dark;
+  --card-width: 434px;
+}
+
+* { box-sizing: border-box; }
+
+html, body { min-height: 100%; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #d9dde1;
+}
+
+.stage {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  position: relative;
+  isolation: isolate;
+  padding: clamp(24px, 5vh, 42px) 20px;
+  background-image:
+    linear-gradient(115deg, rgba(255,255,255,.24), rgba(23,28,35,.08)),
+    url("assets/blurred-document-v2.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.stage::before {
+  content: "";
+  position: fixed;
+  inset: -5%;
+  z-index: -1;
+  backdrop-filter: blur(1px);
+  background: radial-gradient(circle at 54% 48%, transparent 22%, rgba(18,23,30,.13) 100%);
+  pointer-events: none;
+}
+
+.login-card {
+  position: relative;
+  width: min(var(--card-width), calc(100vw - 44px));
+  padding: 135px 31px 26px;
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(160deg, rgba(45,47,55,.94), rgba(31,34,41,.93));
+  box-shadow: 0 30px 65px rgba(11,15,23,.39), inset 0 1px rgba(255,255,255,.06);
+}
+
+.adobe-mark {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  width: 91px;
+  height: 91px;
+  display: grid;
+  place-items: center;
+  transform: translateX(-50%);
+  background: #ed001f;
+  box-shadow: 0 10px 20px rgba(0,0,0,.22);
+}
+
+.adobe-mark svg { width: 58px; height: 58px; fill: #fff; }
+
+.intro h1 {
+  margin: 0 0 2px;
+  font-size: 19px;
+  line-height: 1.12;
+  font-weight: 400;
+  letter-spacing: -.25px;
+}
+
+.intro p {
+  margin: 0 0 12px;
+  color: rgba(255,255,255,.95);
+  font-size: 12.7px;
+  line-height: 1.22;
+  font-weight: 300;
+}
+
+.providers {
+  display: grid;
+  gap: 8px;
+  margin: 0 -1px 16px;
+}
+
+.provider {
+  position: relative;
+  width: 100%;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+  font-size: 12.5px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: filter .16s ease, transform .16s ease, box-shadow .16s ease;
+}
+
+.provider:hover { filter: brightness(1.13); transform: translateY(-1px); box-shadow: 0 4px 10px rgba(0,0,0,.18); z-index: 2; }
+.provider:active { transform: translateY(0) scale(.995); }
+.provider:focus-visible { outline: 3px solid #fff; outline-offset: 2px; z-index: 3; }
+
+.icon-box {
+  flex: 0 0 auto;
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  margin-right: 17px;
+  background: #fff;
+}
+
+.icon-box svg { width: 21px; height: 21px; display: block; }
+.gmail { background: #e50022; }
+.outlook { background: #087bd3; }
+.aol { background: #164aa8; }
+.office { background: #ed001d; }
+.yahoo { background: #73188e; }
+.other { background: #1055c4; }
+
+.built-with, .copyright {
+  margin: 0;
+  color: rgba(255,255,255,.82);
+  font-weight: 300;
+}
+
+.built-with { font-size: 9.3px; line-height: 1.38; }
+.copyright { margin-top: 9px; font-size: 10.7px; line-height: 1.35; }
+
+@media (max-width: 560px) {
+  .stage { padding: clamp(18px, 3.5vh, 28px) 14px; }
+  .login-card {
+    width: min(390px, calc(100vw - 36px));
+    padding: 108px clamp(18px, 6vw, 24px) 20px;
+  }
+  .adobe-mark { width: 80px; height: 80px; }
+  .adobe-mark svg { width: 50px; height: 50px; }
+  .provider { height: 35px; }
+  .intro h1 { font-size: 17px; }
+  .intro p { font-size: 11.5px; }
+}
+
+@media (max-height: 650px) {
+  .stage { padding-top: 16px; padding-bottom: 16px; }
+  .login-card { padding-top: 92px; padding-bottom: 16px; }
+  .adobe-mark { width: 72px; height: 72px; }
+  .adobe-mark svg { width: 44px; height: 44px; }
+  .intro p { margin-bottom: 8px; }
+  .providers { gap: 5px; margin-bottom: 10px; }
+  .provider { height: 32px; }
+  .icon-box { width: 23px; height: 23px; margin-right: 14px; }
+  .icon-box svg { width: 19px; height: 19px; }
+  .copyright { margin-top: 6px; }
+}
+
+@media (max-height: 540px) and (orientation: landscape) {
+  .stage { place-items: start center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .provider { transition: none; }
+}

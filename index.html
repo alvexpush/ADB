@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#272a31">
+  <title>Adobe Document Cloud — Sign in</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="stage">
+    <section class="login-card" aria-labelledby="card-title">
+      <div class="adobe-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" role="img">
+          <path d="M33.9 13.7c-2.2 7.7-5 15.5-8.4 22.6-2.8 1.1-5.4 2.4-7.7 3.8-5 3-7.5 5.6-7.5 8 0 1.7 1.2 2.9 3.1 2.9 3.6 0 8.6-4.9 13.5-13.2 5.1-1.8 10.8-3.1 15.8-3.6 3.8 4.3 7.4 6.6 10 6.6 1.8 0 3-1 3-2.6 0-2.8-4.4-4.8-11.9-5.2-3.3-4-6.4-9.5-7.7-13.8.8-4.2.7-7.3-.3-8.8-.5-.8-1.2-1.3-2-1.3-1.4 0-2.6 1.7-2.6 4.6 0 2.1.6 4.1 1.8 6zm-19.8 34c.4-1.2 2.8-4.1 9.4-7.3-4.4 6.6-7.7 8.3-9.1 8.3-.3 0-.4-.2-.3-1zm20.2-26.1c1.4 3.5 3.7 7.4 6.3 10.6-4 .5-8.2 1.4-12 2.6 2.2-4.5 4.1-9.1 5.7-13.2zm17.8 16.3c-1.3 0-3.6-1.1-6.5-4.1 5.1.2 7.2 1.5 7.2 2.8 0 .7-.3 1.3-.7 1.3zM34 12.1c.5 0 .9 1.2.7 3.2-.1.9-.2 1.6-.4 2.5-.7-2.4-1-4.3-.7-5.2.1-.3.2-.5.4-.5z"/>
+        </svg>
+      </div>
+
+      <header class="intro">
+        <h1 id="card-title">Adobe Document Cloud</h1>
+        <p>To read the document, please choose your email<br>provider below login to view shared file.</p>
+      </header>
+
+      <nav class="providers" aria-label="Email provider sign-in options">
+        <a class="provider gmail" href="https://accounts.google.com/" target="_blank" rel="noopener noreferrer">
+          <span class="icon-box"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#d94c3d" d="M4 5h16v14H4z"/><path fill="#fff" d="M6 8.1V17h2V10l4 3 4-3v7h2V8.1l-6 4.4z"/></svg></span>
+          <span>Sign in with Gmail</span>
+        </a>
+        <a class="provider outlook" href="https://login.live.com/" target="_blank" rel="noopener noreferrer">
+          <span class="icon-box"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#0876c9" d="M2 5l11-2v18L2 19z"/><path fill="#fff" d="M5 9.1c1.2-1.3 3.5-.6 3.5 2.8 0 3.7-2.5 4.3-3.6 2.9-1.1-1.3-1-4.5.1-5.7zm1.2.8c-.8 0-1.1.9-1.1 2.2s.4 2.1 1.1 2.1 1.1-.8 1.1-2.2-.4-2.1-1.1-2.1z"/><path fill="#1494df" d="M14 6h8v12h-8z"/><path fill="#fff" d="M14 8h8l-4 3.3z"/></svg></span>
+          <span>Sign in with Outlook</span>
+        </a>
+        <a class="provider aol" href="https://login.aol.com/" target="_blank" rel="noopener noreferrer">
+          <span class="icon-box"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="2" fill="#184da4"/><text x="3" y="16" fill="white" font-size="9" font-weight="700">Aol.</text></svg></span>
+          <span>Sign in with Aol</span>
+        </a>
+        <a class="provider office" href="https://www.office.com/" target="_blank" rel="noopener noreferrer">
+          <span class="icon-box"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#e54713" d="M6 5l7-3 6 2v16l-6 2-7-3z"/><path fill="#fff" d="M9 7l4-1.2v12.4L9 17z"/></svg></span>
+          <span>Sign in with Office365</span>
+        </a>
+        <a class="provider yahoo" href="https://login.yahoo.com/" target="_blank" rel="noopener noreferrer">
+          <span class="icon-box"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="2" fill="#69308e"/><path fill="#fff" d="M4 5h4l4 6 4-6h4l-6.2 9v5h-3.7v-5z"/></svg></span>
+          <span>Sign in with Yahoo!</span>
+        </a>
+        <a class="provider other" href="mailto:">
+          <span class="icon-box"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="2" fill="#e8edf2"/><path fill="#1957b7" d="M4 6h16v12H4zm2 2v.5l6 4 6-4V8l-6 4z"/></svg></span>
+          <span>Sign in with Other Mail</span>
+        </a>
+      </nav>
+
+      <p class="built-with">Built upon Adobe Document Cloud, Adobe Document Cloud<br>features can be unlocked by purchasing an additional license key.</p>
+      <p class="copyright">Copyright ©2023 Adobe system incorporated. All<br>rights reserved.</p>
+    </section>
+
+  </main>
+</body>
+</html>
